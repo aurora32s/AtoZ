@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/upload_padding"
+    android:layout_marginLeft="@dimen/upload_padding"
+    android:layout_marginRight="@dimen/upload_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dataType_button_layoutSize"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnUpload_dataType_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/uplodType_elevation"
+            android:layout_marginEnd="@dimen/dataType_button_margin"
+            android:background="@drawable/background_button_datatype_on"
+            android:text="@string/btnUpload_dataType_video"
+            android:textStyle="bold"
+            android:textColor="@color/dataType_button_text"
+            android:textSize="@dimen/dataType_button_textSize"/>
+
+        <Button
+            android:id="@+id/btnUpload_dataType_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/uplodType_elevation"
+            android:layout_marginLeft="@dimen/dataType_button_margin"
+            android:background="@drawable/background_button_datatype_off"
+            android:text="@string/btnUpload_dataType_audio"
+            android:textStyle="bold"
+            android:textColor="@color/dataType_button_text"
+            android:textSize="@dimen/dataType_button_textSize"/>
+
+        <ImageView
+            android:id="@+id/btnUpload_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:src="@drawable/upload" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_media"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="3"
+        android:layout_marginTop="@dimen/upload_media_margin"
+        android:layout_marginBottom="@dimen/upload_media_margin"
+        android:background="@color/upload_media_bg_off">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layout_back"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:id="@+id/layout_play"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_upload_media"
+                    android:textStyle="bold"
+                    android:textColor="@color/upload_medit_txt"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_forward"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--TextView
+        android:id="@+id/txt_uploadState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/txt_uploadState_margin"
+        android:gravity="end"
+        android:textStyle="bold"
+        android:textSize="@dimen/txt_upload_size"
+        android:textColor="@color/upload_all_txt"
+        android:text="@string/txt_uploadState_processing"/-->
+
+    <EditText
+        android:id="@+id/edit_upload_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:gravity="top"
+        android:layout_marginBottom="@dimen/upload_edit_margin"
+        android:padding="@dimen/upload_edit_padding"
+        android:focusableInTouchMode="true"
+        android:hint="@string/txt_upload_title_hint"
+        android:textColorHint="@color/upload_edit_txt_hint"
+        android:textSize="@dimen/upload_edit_textSize"
+        android:textColor="@color/upload_all_txt"
+        android:singleLine="true"
+        android:background="@drawable/background_uploadfile_edit"/>
+
+    <EditText
+        android:id="@+id/edit_upload_description"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="2"
+        android:focusable="true"
+        android:gravity="top"
+        android:padding="@dimen/upload_edit_padding"
+        android:focusableInTouchMode="true"
+        android:hint="@string/txt_upload_content_hint"
+        android:textColorHint="@color/upload_edit_txt_hint"
+        android:textSize="@dimen/upload_edit_textSize"
+        android:textColor="@color/upload_all_txt"
+        android:background="@drawable/background_uploadfile_edit"/>
+
+    <!--댓글 허용-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/upload_content_flag_padding">
+
+        <TextView
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:text="@string/switch_comment"
+            android:textSize="@dimen/txt_upload_size"
+            android:textColor="@color/upload_all_txt"/>
+
+        <Switch
+            android:id="@+id/switch_comment"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+    <!--익명 글쓰기-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/upload_content_flag_padding">
+
+        <TextView
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:text="@string/switch_userName"
+            android:textSize="@dimen/txt_upload_size"
+            android:textColor="@color/upload_all_txt"/>
+
+        <Switch
+            android:id="@+id/switch_userName"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+    <!--direct message 허용-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/upload_content_flag_padding">
+
+        <TextView
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:text="@string/switch_directMessage"
+            android:textSize="@dimen/txt_upload_size"
+            android:textColor="@color/upload_all_txt"/>
+
+        <Switch
+            android:id="@+id/switch_directMessage"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+    <!--무료 다운로드 허용-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/upload_content_flag_padding">
+
+        <TextView
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:text="@string/switch_download"
+            android:textSize="@dimen/txt_upload_size"
+            android:textColor="@color/upload_all_txt"/>
+
+        <Switch
+            android:id="@+id/switch_download"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+
+</LinearLayout>

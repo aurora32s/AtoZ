@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/background_audio_item"
+        android:layout_margin="@dimen/audio_list_margin"
+        android:padding="@dimen/audio_list_padding">
+
+        <ImageView
+            android:id='@+id/image_audio'
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/audio_list_margin"
+            android:adjustViewBounds="true"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="@dimen/audio_list_padding">
+
+            <TextView
+                android:id="@+id/txt_audio_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="@dimen/audio_list_textSize"
+                android:textColor="@color/audio_list_txt"/>
+
+            <TextView
+                android:id="@+id/txt_audio_artist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/audio_list_textSize"
+                android:textColor="@color/audio_list_txt"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

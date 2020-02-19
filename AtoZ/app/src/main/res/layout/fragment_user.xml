@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/user_upper_background">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/user_list_image_size"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:src="@drawable/heart"/>
+
+        <TextView
+            android:id="@+id/user_likeNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/margin_mainImage"
+            android:text="@string/no_heart"
+            android:textSize="@dimen/txtSize_mainImage"
+            android:textStyle="bold"
+            android:textColor="@color/txt_mainImage"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/user_list_image_size"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:src="@drawable/comment"/>
+
+        <TextView
+            android:id="@+id/user_commentNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/no_comment"
+            android:textSize="@dimen/txtSize_mainImage"
+            android:textStyle="bold"
+            android:textColor="@color/txt_mainImage"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/user_list_item_margin">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_profile"
+            android:layout_width = "0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:src="@drawable/profile" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/test_user_name"
+                android:textColor="@color/test_user_list_media_name"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/user_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/test_user_detail"
+                android:textColor="@color/test_user_list_media_name"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6">
+
+        <LinearLayout
+            android:id="@+id/user_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"/>
+    </ScrollView>
+
+</LinearLayout>
