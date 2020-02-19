@@ -1,0 +1,33 @@
+{
+  "name": "atoz",
+  "version": "1.0.0",
+  "description": "server for AtoZ",
+  "main": "server.js",
+  "scripts": {
+    "test": "Test Command H.A.M.A.N",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "aurora32s"
+  },
+  "keywords": [
+    "Haman"
+  ],
+  "author": "Haman",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-multiparty": "^2.2.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.3.4",
+    "mongoose": "^5.7.11",
+    "multer": "^1.4.2",
+    "multipart": "^0.1.5",
+    "passport": "^0.4.0",
+    "passport-google-oauth": "^2.0.0",
+    "passport-google-oauth20": "^1.0.0",
+    "passport-google-plus-token": "^2.1.0",
+    "path": "^0.12.7"
+  }
+}

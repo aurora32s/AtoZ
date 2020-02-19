@@ -1,0 +1,17 @@
+
+1. Client : Java - Android Studio
+	(1) Fragment Management
+	(2) Retrofit 2
+	(3) Picasso
+	++ SHA-1 값
+
+2. Server : Node js - Atom
+	(1) Multipart
+	(2) Google Auth 2.0 Client(Google Cloud)
+
+3. DataBase : Mongodb - Robo 3T
+	(1) Node js 연동
+
+
+Additional To Do
+1. Server : Route 분리하기 
