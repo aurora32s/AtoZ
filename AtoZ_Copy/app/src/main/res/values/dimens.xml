@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--activity_login-->
+    <dimen name="app_logo_width">200sp</dimen>
+    <dimen name="app_logo_height">200sp</dimen>
+
+    <dimen name="btn_login_margin_left">50sp</dimen>
+    <dimen name="btn_login_margin_right">50sp</dimen>
+    <dimen name="btn_login_margin_top">70sp</dimen>
+
+    <!--activity_main-->
+    <dimen name="actionbar_elevation">5sp</dimen>
+    <dimen name="navigationbar_height">40sp</dimen>
+
+    <!--item_post-->
+    <dimen name="post_information_height">18sp</dimen>
+    <dimen name="post_information_paddingRight">7sp</dimen>
+    <dimen name="post_information_textSize">10sp</dimen>
+
+    <dimen name="post_information_titleSize">13sp</dimen>
+
+    <!--dialog_detail_post-->
+    <dimen name="dialog_background_padding">10sp</dimen>
+
+    <dimen name="dialog_likeNo_height">18sp</dimen>
+    <dimen name="dialog_likeNo_text_padding">7sp</dimen>
+    <dimen name="dialog_likeNo_text_size">10sp</dimen>
+
+    <dimen name="dialog_post_info_margin">5sp</dimen>
+    <dimen name="dialog_post_title">13sp</dimen>
+    <dimen name="dialog_post_description">17sp</dimen>
+
+    <dimen name="dialog_button_padding">10sp</dimen>
+    <dimen name="dialog_button_height">40sp</dimen>
+    <dimen name="dialog_button_margin">10sp</dimen>
+
+    <dimen name="dialog_button_stroke_width">2sp</dimen>
+    <dimen name="dialog_button_corner">15sp</dimen>
+
+    <!--fragment_upload-->
+    <dimen name="upload_background_margin">10sp</dimen>
+    <dimen name="upload_button_height">35sp</dimen>
+    <dimen name="upload_button_corner">5sp</dimen>
+
+    <dimen name="upload_button_elevation">3sp</dimen>
+    <dimen name="upload_button_margin">4sp</dimen>
+    <dimen name="upload_button_text_size">13sp</dimen>
+
+    <dimen name="upload_media_margin">5sp</dimen>
+
+    <dimen name="uplaod_edit_width">1sp</dimen>
+    <dimen name="upload_edit_corner">5sp</dimen>
+    <dimen name="upload_edit_margin">2sp</dimen>
+    <dimen name="upload_edit_padding">5sp</dimen>
+    <dimen name="upload_edit_hint_size">12sp</dimen>
+
+    <dimen name="upload_switch_padding">3sp</dimen>
+    <dimen name="upload_switch_text_size">12sp</dimen>
+
+    <!--fragment_user-->
+    <dimen name="user_likeNo_height">20sp</dimen>
+    <dimen name="user_likeNo_padding">7sp</dimen>
+    <dimen name="user_likeNo_text_size">10sp</dimen>
+
+    <dimen name="user_info_margin">5sp</dimen>
+
+    <!--item_user-->
+    <dimen name="item_user_minHeight">90sp</dimen>
+    <dimen name="item_user_margin">5sp</dimen>
+
+    <dimen name="item_user_likeNo_height">20sp</dimen>
+    <dimen name="item_user_likeNo_padding">7sp</dimen>
+    <dimen name="item_user_likeNo_textSize">10sp</dimen>
+
+</resources>

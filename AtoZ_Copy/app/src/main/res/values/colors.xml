@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!--activity_login-->
+    <color name="login_background">#FFFFFF</color>
+
+    <!--activity_main-->
+    <color name="main_background">#FFFFFF</color>
+
+    <color name="actionbar_title">#000000</color>
+    <color name="actionbar_background">#FFFFFF</color>
+
+    <!--item_post-->
+    <color name="post_information_text">#000000</color>
+
+    <!--dialog_detail_post-->
+    <color name="dialog_background">#FFFFFF</color>
+    <color name="dialog_text">#000000</color>
+
+    <color name="dialog_button_stroke">#888888</color>
+
+    <!--fragment_upload-->
+    <color name="upload_text">#000000</color>
+    <color name="upload_button_on">#8FCBCF</color>
+    <color name="upload_button_off">#DBDBDB</color>
+
+    <color name="upload_media_background">#F3F3F3</color>
+    <color name="uploaD_edit_background">#A5A5A5</color>
+
+    <!--fragment_user-->
+    <color name="user_background">#C0FF7D</color>
+    <color name="user_text">#000000</color>
+    
+    <!--item_user-->
+    <color name="item_user_text">#000000</color>
+    <color name="item_user_background">#000000</color>
+
+</resources>

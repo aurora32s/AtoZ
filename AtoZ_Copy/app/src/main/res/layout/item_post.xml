@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/item_post_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <!--THUMBNAIL IMAGE-->
+        <ImageView
+            android:id="@+id/item_post_thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/post_information_height"
+        android:orientation="horizontal">
+
+        <!--HEART IMAGE-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/heart"/>
+
+        <!--POST LIKE NO-->
+        <TextView
+            android:id="@+id/item_post_likeNo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/post_information_paddingRight"
+            android:textSize="@dimen/post_information_textSize"
+            android:textStyle="bold"
+            android:textColor="@color/post_information_text"/>
+
+        <!--COMMENT IMAGE-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/comment"/>
+
+        <!--POST COMMENT NO-->
+        <TextView
+            android:id="@+id/item_post_commentNo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/post_information_textSize"
+            android:textStyle="bold"
+            android:textColor="@color/post_information_text"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_post_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/post_information_titleSize"
+        android:textColor="@color/post_information_text"/>
+
+</LinearLayout>

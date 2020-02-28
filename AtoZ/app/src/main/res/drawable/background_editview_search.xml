@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <stroke
-        android:width="@dimen/stroke_searchLayout"
-        android:color="@color/stroke_editSearch"/>
-    <corners android:radius="6sp"/>
-    <solid android:color="@color/main_bg"/>
-</shape>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/main_background">
+
+    <!--TOOLBAR-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:elevation="@dimen/actionbar_elevation"
+        android:background="@color/actionbar_background">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textStyle="bold"
+            android:textColor="@color/actionbar_title"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--MAIN FRAGMENT-->
+    <FrameLayout
+        android:id="@+id/frameLayout_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"/>
+
+    <!--BUTTON NAVIGATION BAR-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navigationbar_height"
+        android:orientation="horizontal">
+
+        <!--HOME BUTTON-->
+        <ImageView
+            android:id="@+id/btn_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_weight="1"
+            android:src="@drawable/home"/>
+
+        <!--UPLOAD BUTTON-->
+        <ImageView
+            android:id="@+id/btn_upload"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_weight="1"
+            android:src="@drawable/plus"/>
+
+        <!--ALBUM_BUTTON-->
+        <ImageView
+            android:id="@+id/btn_album"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_weight="1"
+            android:src="@drawable/heart_book"/>
+
+        <!--USER BUTTON-->
+        <ImageView
+            android:id="@+id/btn_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_weight="1"
+            android:src="@drawable/user"/>
+
+    </LinearLayout>
+</LinearLayout>

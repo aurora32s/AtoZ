@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">AtoZ_Copy</string>
+
+    <!--LoginActivity-->
+    <string name="FAIL_TO_SIGN_IN">로그인에 실패하였습니다.</string>
+
+    <!--permission-->
+    <string name="PERMISSION_GRANTED">권한을 획득하였습니다.</string>
+    <string name="PERMISSION_DENIED">권한 획득에 실패하였습니다.</string>
+
+    <string name="PERMISSION_WARN">권한 경고문</string>
+    <string name="PERMISSION_ASK">권한을 허가하지 않을 시 앱 사용이 불가능 합니다.</string>
+    <string name="PERMISSION_GRANT">권한 허가</string>
+    <string name="PERMISSION_DENY">권한 거절</string>
+
+    <!--HomeFragment-->
+    <string name="FAIL_TO_GET_POST_DATA">게시글을 가져오는데 실패하였습니다.</string>
+
+    <!--DetailPostDialog-->
+    <string name="NON_DOWNLOADABLE">해당 게시글은 다운로드가 불가능합니다.</string>
+
+    <!--fragment_upload.xml-->
+    <string name="upload_button_video">영상</string>
+    <string name="upload_button_audio">음성</string>
+    <string name="upload_upload_file">파일 불러오기</string>
+
+    <string name="upload_edit_title">제목</string>
+    <string name="upload_edit_description">설명...</string>
+    <string name="upload_commentable">댓글 허용</string>
+    <string name="upload_anonymous">익명 글쓰기</string>
+    <string name="upload_messagable">Direct Message 허용</string>
+    <string name="upload_downloadable">무료 다운로드 허용</string>
+
+</resources>

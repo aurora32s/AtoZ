@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/upload_background_margin"
+    android:layout_marginStart="@dimen/upload_background_margin"
+    android:layout_marginEnd="@dimen/upload_background_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_button_height"
+        android:orientation="horizontal">
+
+        <!--영상 선택 버튼-->
+        <Button
+            android:id="@+id/upload_button_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/upload_button_margin"
+            android:elevation="@dimen/upload_button_elevation"
+            android:background="@drawable/fragment_upload_button_on"
+            android:text="@string/upload_button_video"
+            android:textColor="@color/upload_text"
+            android:textSize="@dimen/upload_button_text_size"
+            android:textStyle="bold"/>
+
+        <!--음성 선택 버튼-->
+        <Button
+            android:id="@+id/upload_button_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/upload_button_margin"
+            android:elevation="@dimen/upload_button_elevation"
+            android:background="@drawable/fragment_upload_button_off"
+            android:text="@string/upload_button_audio"
+            android:textColor="@color/upload_text"
+            android:textSize="@dimen/upload_button_text_size"
+            android:textStyle="bold"/>
+
+        <!--UPLOAD BUTTON-->
+        <ImageView
+            android:id="@+id/upload_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:src="@drawable/upload"/>
+
+    </LinearLayout>
+
+    <!--업로드할 AUDIO/VIDEO 미리보기-->
+    <RelativeLayout
+        android:id="@+id/upload_media_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="3"
+        android:layout_marginTop="@dimen/upload_media_margin"
+        android:layout_marginBottom="@dimen/upload_media_margin"
+        android:gravity="center"
+        android:background="@color/upload_media_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/upload_upload_file"
+            android:textColor="@color/upload_text"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <!--EDIT FOR TITLE-->
+    <EditText
+        android:id="@+id/upload_edit_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:gravity="top"
+        android:layout_marginBottom="@dimen/upload_edit_margin"
+        android:padding="@dimen/upload_edit_padding"
+        android:focusableInTouchMode="true"
+        android:hint="@string/upload_edit_title"
+        android:textColorHint="@color/upload_text"
+        android:textColor="@color/upload_text"
+        android:textSize="@dimen/upload_edit_hint_size"
+        android:singleLine="true"
+        android:background="@drawable/fragment_upload_edit"/>
+
+    <!--EDIT FOR DESCRIPTION-->
+    <EditText
+        android:id="@+id/upload_edit_description"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="2"
+        android:focusable="true"
+        android:gravity="top"
+        android:padding="@dimen/upload_edit_padding"
+        android:focusableInTouchMode="true"
+        android:hint="@string/upload_edit_description"
+        android:textColorHint="@color/upload_text"
+        android:textColor="@color/upload_text"
+        android:textSize="@dimen/upload_edit_hint_size"
+        android:background="@drawable/fragment_upload_edit"/>
+
+    <!--댓글 허용-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/upload_switch_padding">
+
+        <TextView
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:text="@string/upload_commentable"
+            android:textColor="@color/upload_text"
+            android:textSize="@dimen/upload_switch_text_size"/>
+
+        <Switch
+            android:id="@+id/upload_switch_comment"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+
+    <!--익명 글쓰기-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/upload_switch_padding">
+
+        <TextView
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:text="@string/upload_anonymous"
+            android:textColor="@color/upload_text"
+            android:textSize="@dimen/upload_switch_text_size"/>
+
+        <Switch
+            android:id="@+id/upload_switch_nickname"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+
+    <!--메시지 허용-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/upload_switch_padding">
+
+        <TextView
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:text="@string/upload_messagable"
+            android:textColor="@color/upload_text"
+            android:textSize="@dimen/upload_switch_text_size"/>
+
+        <Switch
+            android:id="@+id/upload_switch_message"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+
+    <!--다운로드 허용-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/upload_switch_padding">
+
+        <TextView
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:text="@string/upload_downloadable"
+            android:textColor="@color/upload_text"
+            android:textSize="@dimen/upload_switch_text_size"/>
+
+        <Switch
+            android:id="@+id/upload_switch_download"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+</LinearLayout>
