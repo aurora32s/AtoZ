@@ -47,8 +47,8 @@
 #### 1. 로그인 화면
 ![캡처](https://user-images.githubusercontent.com/22411296/90140077-31f1bf80-ddb4-11ea-8851-c95e9b3edb78.JPG)
 ###### 1.1 Android Code
-- 앱을 설치한 이후, 구글 로그인에 성공하였다면 그 이후부터는 자동으로 로그인이 진행됩니다.
-- 이전 로그인 여부를 bool 형식으로 sharedPreferences에 저장하고 그 데이터(isLogin)를 앱 실행 시 검사하여, true라면 자동으로 다음 Activity를 실행합니다.
+###### - 앱을 설치한 이후, 구글 로그인에 성공하였다면 그 이후부터는 자동으로 로그인이 진행됩니다.
+###### - 이전 로그인 여부를 bool 형식으로 sharedPreferences에 저장하고 그 데이터(isLogin)를 앱 실행 시 검사하여, true라면 자동으로 다음 Activity를 실행합니다.
 ```java
 private sharedPreferences pref;
 private SharedPreferences.Editor editor;
@@ -59,7 +59,7 @@ if(pref.getBoolean("isLogin",false)){
   requestLogin(body);
 }
 ```
-- 사용자가 로그인 Button을 클리하면 구글 로그인 API를 수행하여 그 결과값을 받아옵니다.
+###### - 사용자가 로그인 Button을 클리하면 구글 로그인 API를 수행하여 그 결과값을 받아옵니다.
 ```java
 firebaseAuth = FirebaseAuth.getInstance();
 btnGoogleLogin = findViewById(R.id.btn_login);
@@ -95,9 +95,9 @@ if(requestCode == SIGN_IN_REQUEST_CODE){
   }
 }
 ```
-- 구글 로그인이 성공했다면, 필요한 사용자 정보를 Hashmap에 저장한다.
-- 이 때, 구글 로그인 사용자 정보는 GoogleSignInAccount 객체가 가지고 있다.
-Ex. (GoogleSignInAccount).getEmail( ) : 사용자의 구글 이메일 주소
-Ex. (GoogleSignInAccount).getPhotoUrl( ) : 사용자의 구글 프로필 사진 주소(Url 객체이므로 String으로 저장할 때는 toString( ) 함수를 통해 String으로 변경해줄 필요가 있다.)
-- 로그인에 성공했을 시, 서버로 로그인 요청을 보낸다.(requestLogin(body))
-이 때, 첫 로그인 요청은 email, nickname, profile 정보를 자동 로그인 시에는 email 정보만을 보내준다.
+###### - 구글 로그인이 성공했다면, 필요한 사용자 정보를 Hashmap에 저장한다.
+###### - 이 때, 구글 로그인 사용자 정보는 GoogleSignInAccount 객체가 가지고 있다.
+###### Ex. (GoogleSignInAccount).getEmail( ) : 사용자의 구글 이메일 주소
+###### Ex. (GoogleSignInAccount).getPhotoUrl( ) : 사용자의 구글 프로필 사진 주소(Url 객체이므로 String으로 ###### 저장할 때는 toString( ) 함수를 통해 String으로 변경해줄 필요가 있다.)
+###### - 로그인에 성공했을 시, 서버로 로그인 요청을 보낸다.(requestLogin(body))
+###### 이 때, 첫 로그인 요청은 email, nickname, profile 정보를 자동 로그인 시에는 email 정보만을 보내준다.
