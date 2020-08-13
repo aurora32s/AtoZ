@@ -45,6 +45,7 @@
 ![캡처](https://user-images.githubusercontent.com/22411296/90140077-31f1bf80-ddb4-11ea-8851-c95e9b3edb78.JPG)
 ###### 1.1 Android Code
 - 앱을 설치한 이후, 구글 로그인에 성공하였다면 그 이후부터는 자동으로 로그인이 진행됩니다.
+- 이전 로그인 여부를 bool 형식으로 sharedPreferences에 저장하고 그 데이터(isLogin)를 앱 실행 시 검사하여, true라면 자동으로 다음 Activity를 실행합니다.
 ```java
 private sharedPreferences pref;
 private SharedPreferences.Editor editor;
@@ -54,4 +55,21 @@ if(pref.getBoolean("isLogin",false)){
   body.put("email",pref.getString("userEmail",""));
   requestLogin(body);
 }
+```
+- 사용자가 로그인 Button을 클리하면 구글 로그인 API를 수행하여 그 결과괎을 받아옵니다.
 ```java
+firebaseAuth = FirebaseAuth.getInstance();
+btnGoogleLogin = findViewById(R.id.btn_login);
+
+//google login
+GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                    .requestIdToken(getString(R.string.default_web_client_id))
+                    .requestEmail()
+                    .build()
+googleSignInClient = GoogleSignIn.getClient(this. googleSignInOption);
+btnGoogleLogin.setOnClickListener( (v) => {
+  Log.i(TAG, "Login Click");
+  Intent signInIntent = googleSignInClient.getSignInIntent();
+  startActivityForResult(signInIntent, SIGN_IN_REQUEST_CODE);
+});
+```
