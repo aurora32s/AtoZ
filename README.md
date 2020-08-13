@@ -1,5 +1,9 @@
 # AtoZ
+
 Video &amp; Audio Sharing SNS Service in Android Application
+
+사용자들이 자신의 영상이나 음성을 자유롭게 업로드 하고 다른 사용자들과 공유할 수 있는 어플리케이션 제작 프로젝트
+
 * 개발에 사용된 모든 이미지에 저작권 문제가 있을 경우에는 글을 내리도록 하겠습니다.
 
 ## 사용 기술
