@@ -98,6 +98,31 @@ if(requestCode == SIGN_IN_REQUEST_CODE){
 ###### - 구글 로그인이 성공했다면, 필요한 사용자 정보를 Hashmap에 저장한다.
 ###### - 이 때, 구글 로그인 사용자 정보는 GoogleSignInAccount 객체가 가지고 있다.
 ###### Ex. (GoogleSignInAccount).getEmail( ) : 사용자의 구글 이메일 주소
-###### Ex. (GoogleSignInAccount).getPhotoUrl( ) : 사용자의 구글 프로필 사진 주소(Url 객체이므로 String으로 ###### 저장할 때는 toString( ) 함수를 통해 String으로 변경해줄 필요가 있다.)
+###### Ex. (GoogleSignInAccount).getPhotoUrl( ) : 사용자의 구글 프로필 사진 주소(Url 객체이므로 String으로 저장할 때는 toString( ) 함수를 통해 String으로 변경해줄 필요가 있다.)
 ###### - 로그인에 성공했을 시, 서버로 로그인 요청을 보낸다.(requestLogin(body))
 ###### 이 때, 첫 로그인 요청은 email, nickname, profile 정보를 자동 로그인 시에는 email 정보만을 보내준다.
+```java
+call.enqueue(new Callback<GetUserResponse>() {
+  @Override
+  public void onResponse(Call<GetUserResponse> call, Response<GetUserResponse> response){
+    Log.i(TAG, "RESPONSE : " + response.body().getResponseBody().getEmail());
+    if(response.body().getResponseCode() == Common.getInstance().REQUEST_SUCCESS){
+    
+      Common.getInstance().setUserData(response.body().getResponseBody());
+      editor = pref.edit();
+      editor.putString("userEmail",resposne.body().getResponseBody().getEmail());
+      editor.commit();
+      
+      //로그인 성공 시 메인 화면으로 이동
+      Intent moveToMainView = new Intent( this, MainActivity.class );
+      startActivity(moveToMainView);
+      finish();
+    }
+  }
+  
+  @Override
+  public void onFailure(Call<GetUserResponse> call, Throwable t){
+    Log.e(TAG, "RESPONSE ERROR : " + t.toString());
+  }
+});
+```
