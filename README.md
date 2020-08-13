@@ -126,3 +126,20 @@ call.enqueue(new Callback<GetUserResponse>() {
   }
 });
 ```
+###### - requestLogin 함수에서 서버로 요청을 보내는 Retrofit response는 위와 같으며, 그 때의 response Body는 아래와 같다.
+```java
+public class GetUserResponse{
+  @SerializeName("responseCode") int responseCode;
+  @SerializeName("responseBody") UserData responseBody;
+  //getter/setter
+}
+```
+```java
+public class UserData {
+  @SerializeName("email") String email;
+  @SerializeName("email") String nickname;  
+  @SerializeName("email") String profileUrl;  
+  @SerializeName("email") int likeNo;  
+  @SerializeName("email") int commentNo;  
+}
+```
