@@ -1,4 +1,4 @@
-# AtoZ
+# AtoZ(1인 개발)
 
 ##### Video &amp; Audio Sharing SNS Service in Android Application
 ##### 킬링 타임을 위해 간편하게 다양한 영상 / 음성 게시글들을 업로드하고 여러 사람들과 함께 즐길 수 있는 어플리케이션
@@ -39,3 +39,19 @@
 (4) 사용자 화면 : 사용자가 업로드한 게시글을 볼 수 있는 화면
 - 메인 화면과 마찬가지로 사용자가 업로드한 게시글의 썸네일을 클릭하며 해당 게시글의 세부화면 재생
 ```
+
+### 구현 내용
+#### 1. 로그인 화면
+![캡처](https://user-images.githubusercontent.com/22411296/90140077-31f1bf80-ddb4-11ea-8851-c95e9b3edb78.JPG)
+###### 1.1 Android Code
+- 앱을 설치한 이후, 구글 로그인에 성공하였다면 그 이후부터는 자동으로 로그인이 진행됩니다.
+```java
+private sharedPreferences pref;
+private SharedPreferences.Editor editor;
+
+if(pref.getBoolean("isLogin",false)){
+  HashMap<String,String> body = new HashMap<>();
+  body.put("email",pref.getString("userEmail",""));
+  requestLogin(body);
+}
+```java
