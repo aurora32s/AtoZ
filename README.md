@@ -15,6 +15,9 @@
 ```bash
 2. Server : Node js - Atom
 - Multipart
+- Mongoose
+- Multer
+- Multipart
 ```
 ```bash
 3. DataBase : MongoDB - Robo 3T
@@ -56,7 +59,7 @@ if(pref.getBoolean("isLogin",false)){
   requestLogin(body);
 }
 ```
-- 사용자가 로그인 Button을 클리하면 구글 로그인 API를 수행하여 그 결과괎을 받아옵니다.
+- 사용자가 로그인 Button을 클리하면 구글 로그인 API를 수행하여 그 결과값을 받아옵니다.
 ```java
 firebaseAuth = FirebaseAuth.getInstance();
 btnGoogleLogin = findViewById(R.id.btn_login);
@@ -73,3 +76,28 @@ btnGoogleLogin.setOnClickListener( (v) => {
   startActivityForResult(signInIntent, SIGN_IN_REQUEST_CODE);
 });
 ```
+```java
+//google Login button response
+if(requestCode == SIGN_IN_REQUEST_CODE){
+  Task<GoogleSignInAccount> task = GoogleSignIn.geSignedInAccountFromIntent(data);
+  try{
+    //google Login success
+    GoogleSignInAccount account = task.getResult(ApiException.class);
+    
+    HashMap<String, String> body = new HashMap<>();
+    body.put("email", account.getEmail());
+    body.put("nickname", account.getGivenName());
+    body.put("profile", account.getPhotoUrl().toString();
+    
+    requestLogin(body);
+  }catch(ApiException exception){
+    Log.e(TAG, exception.toString();
+  }
+}
+```
+- 구글 로그인이 성공했다면, 필요한 사용자 정보를 Hashmap에 저장한다.
+- 이 때, 구글 로그인 사용자 정보는 GoogleSignInAccount 객체가 가지고 있다.
+Ex. (GoogleSignInAccount).getEmail( ) : 사용자의 구글 이메일 주소
+Ex. (GoogleSignInAccount).getPhotoUrl( ) : 사용자의 구글 프로필 사진 주소(Url 객체이므로 String으로 저장할 때는 toString( ) 함수를 통해 String으로 변경해줄 필요가 있다.)
+- 로그인에 성공했을 시, 서버로 로그인 요청을 보낸다.(requestLogin(body))
+이 때, 첫 로그인 요청은 email, nickname, profile 정보를 자동 로그인 시에는 email 정보만을 보내준다.
