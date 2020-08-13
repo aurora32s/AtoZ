@@ -7,18 +7,21 @@ Video &amp; Audio Sharing SNS Service in Android Application
 * 개발에 사용된 모든 이미지에 저작권 문제가 있을 경우에는 글을 내리도록 하겠습니다.
 
 ## 사용 기술
+```bash
 1. Client : Java - Android Studio
 - Fragment Management
 - Retrofit 2
 - Picasso
 - Google Firebase Login
-
+```
+```bash
 2. Server : Node js - Atom
 - Multipart
-
+```
+```bash
 3. DataBase : MongoDB - Robo 3T
 - Node js 연동
-
+```
 ## 기본 기능
 ![atoz_1](https://user-images.githubusercontent.com/22411296/74808760-f14a4980-532e-11ea-80b2-3f344940391e.JPG)
 
